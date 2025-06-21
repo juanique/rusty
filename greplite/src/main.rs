@@ -9,11 +9,11 @@ use regex::Regex;
 #[command(version, about, long_about = None)]
 struct Args {
     // The pattern to search for
-    #[arg(short, long)]
+    #[arg(short, long, help = "The pattern to search for")]
     pattern: String,
 
     // File to search or '-' for stdin
-    #[arg(short, long, default_value = "-")]
+    #[arg(short, long, default_value = "-", help = "File to search or '-' for stdin")]
     input: String,
 }
 
